@@ -1,24 +1,15 @@
 import React from 'react'
 import "./../styles/styles.css"
+import { useForm } from '../hooks/useForm'
 
 export const RegisterPage = () => {
 
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    password: '',
-    repeatPassword: ''
-  });
-
-  const { name, email, password, repeatPassword } = formData;
-  
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  const {name, email, password, repeatPassword, formData, onChange } = useForm({
+		name: "",
+		email: "",
+		password: "",
+		repeatPassword: "",
+	});
   
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); 
