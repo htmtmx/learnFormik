@@ -5,13 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RegisterPage } from './pages/RegisterPage';
 import { FormikBasicPage } from './pages/FormikBasicPage';
+import { FormikYupPage } from './pages/FormikYupPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <FormikBasicPage />
+    <FormikYupPage/>
   </React.StrictMode>
 );
 
