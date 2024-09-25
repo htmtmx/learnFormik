@@ -6,13 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { RegisterPage } from './pages/RegisterPage';
 import { FormikBasicPage } from './pages/FormikBasicPage';
 import { FormikYupPage } from './pages/FormikYupPage';
+import { FormikComponents } from './pages/FormikComponents';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <FormikYupPage/>
+    <FormikComponents/>
   </React.StrictMode>
 );
 
