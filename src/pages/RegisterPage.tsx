@@ -4,7 +4,7 @@ import { useForm } from '../hooks/useForm'
 
 export const RegisterPage = () => {
 
-  const {name, email, password, repeatPassword, formData, onChange } = useForm({
+  const { name, email, password, repeatPassword, formData, onChange, resetForm } = useForm({
 		name: "",
 		email: "",
 		password: "",
@@ -21,26 +21,33 @@ export const RegisterPage = () => {
       <h1>Register page</h1>
       <form onSubmit={onSubmit}>
         <input 
-        type="text" placeholder='Name' name='name'
-        onChange={onChange} 
-        value={name}
+          type="text" placeholder='Name' name='name'
+          onChange={onChange} 
+          value={name}
+          className={name ? 'valid' : 'has-error'}
+        />
+        {name.trim().length <= 0 && <span>Campo requerido</span>}
+        <input 
+          type="email" placeholder='Email' name='email'
+          onChange={onChange} 
+          value={email}
         />
         <input 
-        type="email" placeholder='Email' name='email'
-        onChange={onChange} 
-        value={email}
+          type="password" placeholder='Password' name='password'
+          onChange={onChange} 
+          value={password}
         />
         <input 
-        type="password" placeholder='Password' name='password'
-        onChange={onChange} 
-        value={password}
+          type="password" placeholder='Repeat Password' name='repeatPassword'
+          onChange={onChange} 
+          value={repeatPassword}
         />
-        <input 
-        type="password" placeholder='Repeat Password' name='repeatPassword'
-        onChange={onChange} 
-        value={repeatPassword}
-        />
-        <button type="submit">Register</button>
+        <button type="submit">
+          Register
+        </button>
+        <button type="button" onClick={resetForm}>
+          Reset
+        </button>
       </form>
     </div>
   )
