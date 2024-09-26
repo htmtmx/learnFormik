@@ -3,12 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RegisterPage } from './pages/RegisterPage';
-import { FormikBasicPage } from './pages/FormikBasicPage';
-import { FormikYupPage } from './pages/FormikYupPage';
-import { FormikComponents } from './pages/FormikComponents';
-import { FormikAbstract } from './pages/FormikAbstract';
-
+import { RegisterPage, FormikBasicPage, FormikYupPage, FormikComponents, FormikAbstract } from './pages';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
