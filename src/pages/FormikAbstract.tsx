@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import './../styles/styles.css';
+import { MyTextInput } from '../components/MyTextInput';
 
 export const FormikAbstract = () => {
 	return (
@@ -37,16 +38,10 @@ export const FormikAbstract = () => {
 				})}
 			>
 				{(formik) => (
-					<Form>
-						<label htmlFor="firstName">First Name</label>
-						<Field name="firstName" type="text" />
-						<ErrorMessage name="firstName" component="span" />
-						<label htmlFor="lastName">Last Name</label>
-						<Field name="lastName" type="text" />
-						<ErrorMessage name="lastName" component="span" />
-						<label htmlFor="email">Email</label>
-						<Field name="email" type="email" />
-						<ErrorMessage name="email" component="span" />
+          <Form>
+            <MyTextInput label='My first name' name='firstName' placeholder="First Name"/>
+            <MyTextInput label='Last name' name='lastName' placeholder="Last Name"/>
+            <MyTextInput label='Email' name='email' placeholder="email@email.com"/>
 						<label htmlFor="jobType">Job type</label>
 						<Field name="jobType" component="select">
 							<option value="">Select...</option>
