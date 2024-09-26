@@ -1,0 +1,42 @@
+[
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Cesar",
+    "label": "First Name",
+    "value": ""
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Pineda",
+    "label": "Last Name",
+    "value": "",
+    "validations":[{
+      "type": "required"
+    }]
+
+  },
+  {
+    "type": "input",
+    "name": "email",
+    "placeholder": "email@mail.com",
+    "label": "Email",
+    "value": "",
+    "validations":[{
+      "type": "required"
+    }]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "placeholder": "email@mail.com",
+    "label": "Favorite game",
+    "value": "",
+    "options": [
+         {"id": 1, "label": "League of Legends"},
+         {"id": 2, "label": "Valorant"},
+         {"id": 3, "label": "Counter Strike"}
+    ]
+  }
+]
