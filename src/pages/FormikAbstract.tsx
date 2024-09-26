@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 
 import './../styles/styles.css';
 import { MyTextInput } from '../components/MyTextInput';
+import { MySelect } from '../components/MySelect';
 
 export const FormikAbstract = () => {
 	return (
@@ -41,15 +42,13 @@ export const FormikAbstract = () => {
           <Form>
             <MyTextInput label='My first name' name='firstName' placeholder="First Name"/>
             <MyTextInput label='Last name' name='lastName' placeholder="Last Name"/>
-            <MyTextInput label='Email' name='email' placeholder="email@email.com"/>
-						<label htmlFor="jobType">Job type</label>
-						<Field name="jobType" component="select">
-							<option value="">Select...</option>
+            <MyTextInput label='Email' name='email' placeholder="email@email.com" />
+            <MySelect label='Job type' name='jobType'>
+              <option value="">Select...</option>
 							<option value="jr">Jr</option>
 							<option value="mid">Mid</option>
 							<option value="sr">Sr</option>
-						</Field>
-						<ErrorMessage name="jobType" component="span" />
+            </MySelect>
 						<label>
 							<Field name="terms" type="checkbox" />
 							Terms and conditions
