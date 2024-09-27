@@ -4,7 +4,10 @@
     "name": "firstName",
     "placeholder": "Cesar",
     "label": "First Name",
-    "value": ""
+    "value": "",
+    "validations":[{
+      "type": "required"
+    }]
   },
   {
     "type": "input",
@@ -37,6 +40,9 @@
          {"id": 1, "label": "League of Legends"},
          {"id": 2, "label": "Valorant"},
          {"id": 3, "label": "Counter Strike"}
-    ]
+    ],
+    "validations":[{
+      "type": "required"
+    }]
   }
 ]
