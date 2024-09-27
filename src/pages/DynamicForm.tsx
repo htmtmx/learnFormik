@@ -19,6 +19,14 @@ for (const input of formJson) {
     if (validation.type === "required") {
       schema = schema.required("Required");
     }
+    if (validation.type === "minLength") {
+      schema = schema.min((validation as any).value,`Must be min ${(validation as any).value} characters`);
+    }
+    if (validation.type === "email") {
+      schema = schema.matches(
+				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+			, "Invalid email address");
+    }
   }
   requiredFields[input.name] = schema;
   
